@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 50% 98%;
+  --foreground: 222 47% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 12%;
+  --primary: 221 75% 52%;
+  --primary-foreground: 210 40% 96%;
+  --secondary: 267 60% 60%;
+  --secondary-foreground: 210 40% 96%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 222 15% 40%;
+  --accent: 162 70% 50%;
+  --accent-foreground: 210 40% 96%;
+  --success: 141 60% 45%;
+  --success-foreground: 210 40% 96%;
+  --border: 220 18% 88%;
+  --input: 220 18% 88%;
+  --ring: 221 75% 52%;
+  --radius: 1.25rem;
+}
+
+.dark {
+  --background: 222 47% 8%;
+  --foreground: 210 40% 96%;
+  --card: 222 47% 10%;
+  --card-foreground: 210 40% 96%;
+  --popover: 222 47% 10%;
+  --popover-foreground: 210 40% 96%;
+  --primary: 221 85% 62%;
+  --primary-foreground: 222 47% 10%;
+  --secondary: 267 70% 68%;
+  --secondary-foreground: 210 40% 96%;
+  --muted: 222 20% 18%;
+  --muted-foreground: 214 20% 74%;
+  --accent: 162 70% 52%;
+  --accent-foreground: 222 47% 10%;
+  --success: 141 55% 48%;
+  --success-foreground: 222 47% 10%;
+  --border: 222 20% 20%;
+  --input: 222 20% 20%;
+  --ring: 221 85% 62%;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+* {
+  @apply border-border;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  @apply bg-primary/80 text-primary-foreground;
+}
+
+#skip-to-content:focus {
+  @apply fixed left-4 top-4 z-50 inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow outline-none;
+}
